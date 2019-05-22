@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import GlobalStyle from '../imports/globalStyle';
 
 export default ({ children }) => (
   <React.Fragment>
@@ -9,5 +10,6 @@ export default ({ children }) => (
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
       <title>ZachCossman.com</title>
     </Helmet>
+    <GlobalStyle />
   </React.Fragment>
 );
