@@ -5,7 +5,7 @@ import { palette, font } from '../imports/variables';
 import heroImg from '../../static/images/ZachC186.jpg';
 
 const Hero = styled.div`
-  background: url(${heroImg}) no-repeat center;
+  background: url(${heroImg}) no-repeat top;
   background-size: cover;
   height: 100vh;
   position: fixed;
