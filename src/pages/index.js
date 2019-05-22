@@ -35,32 +35,28 @@ const Content = styled.div`
 `;
 
 export default () => (
-  <React.Fragment>
-    <Layout>
-      <Content>
-        <div className="header">
-          <h3>Back in NYC</h3>
-          <h6>Saturday, March 18th</h6>
-        </div>
-        <div className="body">
-          <p>
-            Zach is back in NYC after playing Jerry Allison in BUDDY: The Buddy
-            Holly Story at Bucks County Playhouse in New Hope, PA.
-            <br />
-            <br />
-            This production returned to the Bucks County Playhouse for the 3rd
-            time, after wildly-successful runs in 2016 and 2017. Zach played
-            Jerry Allison in both of the previous iterations.
-            <br />
-            <br />
-            The production ran February 10th – March 3rd, with direction by
-            Hunter Foster and choreography by Lorin Latarro.
-            <br />
-            <br />
-            Stay tuned for information about upcoming gigs.
-          </p>
-        </div>
-      </Content>
-    </Layout>
-  </React.Fragment>
+  <Content>
+    <div className="header">
+      <h3>Back in NYC</h3>
+      <h6>Saturday, March 18th</h6>
+    </div>
+    <div className="body">
+      <p>
+        Zach is back in NYC after playing Jerry Allison in BUDDY: The Buddy
+        Holly Story at Bucks County Playhouse in New Hope, PA.
+        <br />
+        <br />
+        This production returned to the Bucks County Playhouse for the 3rd time,
+        after wildly-successful runs in 2016 and 2017. Zach played Jerry Allison
+        in both of the previous iterations.
+        <br />
+        <br />
+        The production ran February 10th – March 3rd, with direction by Hunter
+        Foster and choreography by Lorin Latarro.
+        <br />
+        <br />
+        Stay tuned for information about upcoming gigs.
+      </p>
+    </div>
+  </Content>
 );

@@ -35,16 +35,12 @@ const Content = styled.div`
 `;
 
 export default () => (
-  <React.Fragment>
-    <Layout>
-      <Content>
-        <div className="header">
-          <h3>contact me.</h3>
-        </div>
-        <div className="body">
-          <p>This is my contact. This is my test</p>
-        </div>
-      </Content>
-    </Layout>
-  </React.Fragment>
+  <Content>
+    <div className="header">
+      <h3>contact me.</h3>
+    </div>
+    <div className="body">
+      <p>This is my contact. This is my test</p>
+    </div>
+  </Content>
 );
