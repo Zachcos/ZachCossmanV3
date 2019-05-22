@@ -1,9 +1,20 @@
 import React from 'react';
+import styled from 'styled-components';
 import Layout from '../components/layout';
+import { palette, font } from '../imports/variables';
+import heroImg from '../../static/images/ZachC186.jpg';
+
+const Hero = styled.div`
+  background: url(${heroImg}) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  position: fixed;
+  width: 30vw;
+`;
 
 export default () => (
   <React.Fragment>
     <Layout />
-    <div>Hello world!</div>
+    <Hero />
   </React.Fragment>
 );
