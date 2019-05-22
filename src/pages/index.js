@@ -12,9 +12,29 @@ const Hero = styled.div`
   width: 30vw;
 `;
 
+const Display = styled.div`
+  background: ${palette.white};
+  display: inline-block;
+  min-height: 92vh;
+  padding-left: 30vw;
+  width: 70vw;
+  h1 {
+    ${font.sentinel_bold}
+    color: ${palette.dark};
+    font-size: 5rem;
+  }
+
+  h2 {
+    ${font.sentinel_bold}
+    color: ${palette.dark};
+    font-size: 3.75rem;
+  }
+`;
+
 export default () => (
   <React.Fragment>
     <Layout />
     <Hero />
+    <Display />
   </React.Fragment>
 );
