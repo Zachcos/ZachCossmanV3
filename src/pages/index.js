@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/layout';
+import NavBar from '../components/navbar';
 import { palette, font } from '../imports/variables';
 import heroImg from '../../static/images/ZachC186.jpg';
 
@@ -35,6 +36,8 @@ export default () => (
   <React.Fragment>
     <Layout />
     <Hero />
-    <Display />
+    <Display>
+      <NavBar />
+    </Display>
   </React.Fragment>
 );
