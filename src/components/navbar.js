@@ -15,17 +15,16 @@ const NavBar = styled.div`
     margin-right: auto;
   }
   .nav {
-    color: $dark;
     display: flex;
     justify-content: space-around;
     margin-right: 25px;
     width: 45%;
     a {
       ${font.circular_book}
+      color: ${palette.dark};
       font-size: 0.8rem;
-      text-transform: uppercase;
       text-decoration: none;
-      color: $dark;
+      text-transform: uppercase;
     }
   }
 `;
