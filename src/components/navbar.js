@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { palette, font } from '../imports/variables';
 
 const NavBar = styled.div`
@@ -33,21 +34,21 @@ export default () => (
   <NavBar>
     <h1 className="brand">zach.</h1>
     <div className="nav">
-      <a href="#" className="nav--item">
+      <Link to="/" className="nav--item">
         home
-      </a>
-      <a href="#" className="nav--item">
+      </Link>
+      <Link to="/bio" className="nav--item">
         bio
-      </a>
-      <a href="#" className="nav--item">
+      </Link>
+      <Link to="#resume" className="nav--item">
         resume
-      </a>
-      <a href="#" className="nav--item">
+      </Link>
+      <Link to="#media" className="nav--item">
         media
-      </a>
-      <a href="#" className="nav--item">
+      </Link>
+      <Link to="#contact" className="nav--item">
         contact
-      </a>
+      </Link>
     </div>
   </NavBar>
 );
