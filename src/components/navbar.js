@@ -40,13 +40,13 @@ export default () => (
       <Link to="/bio" className="nav--item">
         bio
       </Link>
-      <Link to="#resume" className="nav--item">
+      <Link to="/resume" className="nav--item">
         resume
       </Link>
-      <Link to="#media" className="nav--item">
+      <Link to="/media" className="nav--item">
         media
       </Link>
-      <Link to="#contact" className="nav--item">
+      <Link to="/contact" className="nav--item">
         contact
       </Link>
     </div>
