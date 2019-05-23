@@ -11,6 +11,8 @@ const NavBar = styled.div`
   position: fixed;
   width: 70vw;
   .brand {
+    ${font.sentinel_bold}
+    color: ${palette.dark};
     font-size: 2rem;
     margin-left: 25px;
     margin-right: auto;
@@ -34,21 +36,11 @@ export default () => (
   <NavBar>
     <h1 className="brand">zach.</h1>
     <div className="nav">
-      <Link to="/" className="nav--item">
-        home
-      </Link>
-      <Link to="/bio" className="nav--item">
-        bio
-      </Link>
-      <Link to="/resume" className="nav--item">
-        resume
-      </Link>
-      <Link to="/media" className="nav--item">
-        media
-      </Link>
-      <Link to="/contact" className="nav--item">
-        contact
-      </Link>
+      <Link to="/">home</Link>
+      <Link to="/bio">bio</Link>
+      <Link to="/resume">resume</Link>
+      <Link to="/media">media</Link>
+      <Link to="/contact">contact</Link>
     </div>
   </NavBar>
 );
