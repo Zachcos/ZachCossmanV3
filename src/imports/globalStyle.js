@@ -49,49 +49,6 @@ const GlobalStyle = createGlobalStyle`
   ul {
     display: inline-block !important;
   }
-
-  @font-face {
-    font-family: 'Sentinel';
-    src: url('fonts/Sentinel-Semibold.woff2') format('woff2'),
-        url('fonts/Sentinel-Semibold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-  } 
-  @font-face {
-      font-family: 'Sentinel';
-      src: url('fonts/Sentinel-Bold.woff2') format('woff2'),
-          url('fonts/Sentinel-Bold.woff') format('woff');
-      font-weight: bold;
-      font-style: normal;
-  }
-  @font-face {
-      font-family: 'Circular Std Book';
-      src: url('fonts/CircularStd-Book.woff2') format('woff2'),
-          url('fonts/CircularStd-Book.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-  }
-  @font-face {
-      font-family: 'Circular Std Book';
-      src: url('fonts/CircularStd-BookItalic.woff2') format('woff2'),
-          url('fonts/CircularStd-BookItalic.woff') format('woff');
-      font-weight: normal;
-      font-style: italic;
-  }
-  @font-face {
-      font-family: 'Circular Std';
-      src: url('fonts/CircularStd-Black.woff2') format('woff2'),
-          url('fonts/CircularStd-Black.woff') format('woff');
-      font-weight: 900;
-      font-style: normal;
-  }
-  @font-face {
-      font-family: 'Circular Std';
-      src: url('fonts/CircularStd-BlackItalic.woff2') format('woff2'),
-          url('fonts/CircularStd-BlackItalic.woff') format('woff');
-      font-weight: 900;
-      font-style: italic;
-  }
 `;
 
 export default GlobalStyle;
