@@ -5,18 +5,18 @@ import { palette, font } from '../imports/variables';
 const Content = styled.div`
   margin: 30vh 0 0 10vw;
   .header {
-    ${font.sentinel_semibold};
+    ${font.domine};
     color: ${palette.dark};
     font-size: 2.75rem;
     h3 {
-      ${font.sentinel_semibold};
+      ${font.domine};
       color: ${font.dark};
       font-size: 2.75rem;
     }
     h6 {
-      ${font.circular_book};
+      ${font.montserrat};
       color: ${palette.dark};
-      font-size: 0.825rem;
+      font-size: 0.875rem;
       font-style: italic;
       letter-spacing: 1px;
       padding: 5px 0 0 75px;
@@ -25,10 +25,13 @@ const Content = styled.div`
   .body {
     margin: 50px;
       p {
-        ${font.circular_book}
+        ${font.montserrat}
         color: ${palette.dark};
-        line-height: 1.35rem;
+        line-height: 1.5rem;
         width: 40vw;
+      }
+      span {
+        ${font.montserrat_bold}
       }
   }
 `;
@@ -41,8 +44,9 @@ export default () => (
     </div>
     <div className="body">
       <p>
-        Zach is back in NYC after playing Jerry Allison in BUDDY: The Buddy
-        Holly Story at Bucks County Playhouse in New Hope, PA.
+        Zach is back in NYC after playing <span>Jerry Allison</span> in{' '}
+        <span>BUDDY: The Buddy Holly Story</span> at Bucks County Playhouse in
+        New Hope, PA.
         <br />
         <br />
         This production returned to the Bucks County Playhouse for the 3rd time,
