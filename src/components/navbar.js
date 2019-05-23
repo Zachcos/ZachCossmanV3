@@ -11,7 +11,7 @@ const NavBar = styled.div`
   position: fixed;
   width: 70vw;
   .brand {
-    ${font.sentinel_bold}
+    ${font.domine}
     color: ${palette.dark};
     font-size: 2rem;
     margin-left: 25px;
@@ -23,7 +23,7 @@ const NavBar = styled.div`
     margin-right: 25px;
     width: 45%;
     a {
-      ${font.circular_book}
+      ${font.montserrat}
       color: ${palette.dark};
       font-size: 0.8rem;
       text-decoration: none;
