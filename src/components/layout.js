@@ -22,13 +22,12 @@ const Display = styled.div`
   padding-left: 30vw;
   width: 70vw;
   h1 {
-    ${font.sentinel_bold}
+    ${font.domine}
     color: ${palette.dark};
     font-size: 5rem;
   }
-
   h2 {
-    ${font.sentinel_bold}
+    ${font.domine}
     color: ${palette.dark};
     font-size: 3.75rem;
   }
@@ -40,6 +39,10 @@ export default ({ children }) => (
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+      <link
+        href="https://fonts.googleapis.com/css?family=Domine:400,700|Montserrat:500,500i,700,700i&display=swap"
+        rel="stylesheet"
+      />
       <title>ZachCossman.com</title>
     </Helmet>
     <Hero />
