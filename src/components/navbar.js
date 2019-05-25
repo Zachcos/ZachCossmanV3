@@ -9,7 +9,9 @@ const NavBar = styled.div`
   display: flex;
   height: 60px;
   position: fixed;
+  margin-left: 30vw;
   width: 70vw;
+  z-index: 10;
   .brand {
     ${font.domine}
     color: ${palette.dark};
@@ -29,6 +31,10 @@ const NavBar = styled.div`
       text-decoration: none;
       text-transform: uppercase;
     }
+  }
+  @media screen and (max-width: 835px) {
+    left: 0;
+    width: 100vw;
   }
 `;
 

@@ -13,6 +13,10 @@ const Hero = styled.div`
   height: 100vh;
   position: fixed;
   width: 30vw;
+  @media screen and (max-width: 835px) {
+    width: 100vw;
+    z-index: -1;
+  }
 `;
 
 const Display = styled.div`
@@ -30,6 +34,12 @@ const Display = styled.div`
     ${font.domine}
     color: ${palette.dark};
     font-size: 3.75rem;
+  }
+  @media screen and (max-width: 835px) {
+    left: 0;
+    padding-left: 0;
+    width: 100vw;
+    z-index: 100;
   }
 `;
 
@@ -52,10 +62,8 @@ export default ({ children }) => (
       <title>ZachCossman.com</title>
     </Helmet>
     <Hero />
-    <Display>
-      <NavBar />
-      {children}
-    </Display>
+    <NavBar />
+    <Display>{children}</Display>
     <GlobalStyle />
   </React.Fragment>
 );
