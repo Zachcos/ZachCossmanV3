@@ -19,6 +19,10 @@ const NavBar = styled.div`
     margin-left: 25px;
     margin-right: auto;
   }
+  .nav_btn {
+    display: none;
+    visibility: hidden;
+  }
   .nav {
     display: flex;
     justify-content: space-around;
@@ -36,12 +40,26 @@ const NavBar = styled.div`
     left: 0;
     margin-left: 0;
     width: 100vw;
+    .nav_btn {
+      color: ${palette.dark};
+      cursor: pointer;
+      display: block;
+      font-size: 1.75rem;
+      margin-right: 50px;
+      visibility: visible;
+    }
+    .nav {
+      display: none;
+    }
   }
 `;
 
 export default () => (
   <NavBar>
     <h1 className="brand">zach.</h1>
+    <div className="nav_btn">
+      <i className="fas fa-bars" />
+    </div>
     <div className="nav">
       <Link to="/">home</Link>
       <Link to="/bio">bio</Link>
