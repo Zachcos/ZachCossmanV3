@@ -34,6 +34,7 @@ const NavBar = styled.div`
   }
   @media screen and (max-width: 835px) {
     left: 0;
+    margin-left: 0;
     width: 100vw;
   }
 `;

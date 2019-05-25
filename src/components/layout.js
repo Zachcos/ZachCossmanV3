@@ -37,6 +37,7 @@ const Display = styled.div`
   }
   @media screen and (max-width: 835px) {
     left: 0;
+    margin-top: 70vh;
     padding-left: 0;
     width: 100vw;
     z-index: 100;

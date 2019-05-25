@@ -24,15 +24,25 @@ const Content = styled.div`
   }
   .body {
     margin: 50px;
+    p {
+      ${font.montserrat}
+      color: ${palette.dark};
+      line-height: 1.5rem;
+      width: 40vw;
+    }
+    span {
+      ${font.montserrat_bold}
+    }
+  }
+  @media screen and (max-width: 835px) {
+    margin: 15vh auto;
+    width: 80vw;
+    .body {
+      margin: 50px 0;
       p {
-        ${font.montserrat}
-        color: ${palette.dark};
-        line-height: 1.5rem;
-        width: 40vw;
+        width: 100%;
       }
-      span {
-        ${font.montserrat_bold}
-      }
+    }
   }
 `;
 
