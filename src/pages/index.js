@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { palette, font } from '../imports/variables';
+import { palette, font, breakpoint } from '../imports/variables';
 
 const Content = styled.div`
   margin: 30vh 0 0 10vw;
@@ -34,7 +34,7 @@ const Content = styled.div`
       ${font.montserrat_bold}
     }
   }
-  @media screen and (max-width: 835px) {
+  @media screen and (${breakpoint}) {
     margin: 15vh auto;
     width: 80vw;
     .body {

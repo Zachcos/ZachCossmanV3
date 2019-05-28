@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import NavBar from './navbar';
 import GlobalStyle from '../imports/globalStyle';
-import { palette, font } from '../imports/variables';
+import { palette, font, breakpoint } from '../imports/variables';
 
 import heroImg from '../../static/images/ZachC186.jpg';
 
@@ -13,7 +13,7 @@ const Hero = styled.div`
   height: 100vh;
   position: fixed;
   width: 30vw;
-  @media screen and (max-width: 835px) {
+  @media screen and (${breakpoint}) {
     width: 100vw;
     z-index: -1;
   }
@@ -35,7 +35,7 @@ const Display = styled.div`
     color: ${palette.dark};
     font-size: 3.75rem;
   }
-  @media screen and (max-width: 835px) {
+  @media screen and (${breakpoint}) {
     left: 0;
     margin-top: 70vh;
     padding-left: 0;

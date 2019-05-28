@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { palette, font } from '../imports/variables';
+import { palette, font, breakpoint } from '../imports/variables';
 
 const NavBar = styled.div`
   align-items: center;
@@ -36,7 +36,7 @@ const NavBar = styled.div`
       text-transform: uppercase;
     }
   }
-  @media screen and (max-width: 835px) {
+  @media screen and (${breakpoint}) {
     left: 0;
     margin-left: 0;
     width: 100vw;

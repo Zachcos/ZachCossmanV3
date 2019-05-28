@@ -37,4 +37,6 @@ const font = {
   },
 };
 
-export { palette, font };
+const breakpoint = 'max-width: 835px';
+
+export { palette, font, breakpoint };
