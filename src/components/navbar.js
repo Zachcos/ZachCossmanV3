@@ -49,7 +49,20 @@ const NavBar = styled.div`
       visibility: visible;
     }
     .nav {
-      display: none;
+      align-items: center;
+      background-color: darkred;
+      display: flex;
+      flex-direction: column;
+      height: 80vh;
+      left: 0;
+      padding: 20% 0;
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      a {
+        color: ${palette.white};
+        font-size: 2rem;
+      }
     }
   }
 `;
