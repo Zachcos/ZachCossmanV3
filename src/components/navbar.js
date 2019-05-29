@@ -46,11 +46,14 @@ const NavBar = styled.div`
       display: block;
       font-size: 1.75rem;
       margin-right: 50px;
+      position: fixed;
+      right: -20px;
       visibility: visible;
+      z-index: 200;
     }
     .nav {
       align-items: center;
-      background-color: darkred;
+      background-color: ${palette.light};
       display: flex;
       flex-direction: column;
       height: 100vh;
@@ -59,8 +62,9 @@ const NavBar = styled.div`
       top: 0;
       width: 100vw;
       a {
-        color: ${palette.white};
+        color: ${palette.dark};
         font-size: 2rem;
+        font-weight: 700;
         &:first-child {
           margin-top: 120px
         }
