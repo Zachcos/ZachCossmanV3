@@ -56,11 +56,15 @@ const NavBar = styled.div`
       background-color: ${palette.light};
       display: flex;
       flex-direction: column;
-      height: 100vh;
+      height: 0;
       left: 0;
+      opacity: 0;
       position: fixed;
       top: 0;
+      visibility: none;
       width: 100vw;
+
+      transition: opacity 0.35s, visibility 0.35s, height 0.35s;
       a {
         color: ${palette.dark};
         font-size: 2rem;
@@ -72,22 +76,66 @@ const NavBar = styled.div`
           margin-bottom: 120px
         }
       }
+      &.open {
+        height: 100vh;
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 `;
 
-export default () => (
-  <NavBar>
-    <h1 className="brand">zach.</h1>
-    <div className="nav_btn">
-      <i className="fas fa-bars" />
-    </div>
-    <div className="nav">
-      <Link to="/">home</Link>
-      <Link to="/bio">bio</Link>
-      <Link to="/resume">resume</Link>
-      <Link to="/media">media</Link>
-      <Link to="/contact">contact</Link>
-    </div>
-  </NavBar>
-);
+export class Nav extends React.Component {
+  handleClick = () => {
+    this.toggleNav();
+    this.toggleBtn();
+  };
+
+  toggleNav = () => {
+    if ($('#nav').hasClass('open')) {
+      $('#nav').removeClass('open');
+    } else {
+      $('#nav').addClass('open');
+    }
+  };
+
+  toggleBtn = () => {
+    if ($('#nav_btn > i').hasClass('fa-bars')) {
+      $('#nav_btn > i').removeClass('fa-bars');
+      $('#nav_btn > i').addClass('fa-times');
+    } else {
+      $('#nav_btn > i').removeClass('fa-times');
+      $('#nav_btn > i').addClass('fa-bars');
+    }
+  };
+
+  render() {
+    return (
+      <NavBar>
+        <h1 className="brand">zach.</h1>
+        <div className="nav_btn" id="nav_btn" onClick={this.handleClick}>
+          <i className="fas fa-bars" />
+        </div>
+        <div className="nav" id="nav">
+          <Link onClick={this.handleClick} to="/">
+            home
+          </Link>
+          <Link onClick={this.handleClick} to="/bio">
+            bio
+          </Link>
+          <Link onClick={this.handleClick} to="/resume">
+            resume
+          </Link>
+          <Link onClick={this.handleClick} to="/media">
+            media
+          </Link>
+          <Link onClick={this.handleClick} to="/contact">
+            contact
+          </Link>
+        </div>
+      </NavBar>
+    );
+  }
+}
+
+export default Nav;
