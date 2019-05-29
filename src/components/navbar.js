@@ -53,15 +53,20 @@ const NavBar = styled.div`
       background-color: darkred;
       display: flex;
       flex-direction: column;
-      height: 80vh;
+      height: 100vh;
       left: 0;
-      padding: 20% 0;
       position: fixed;
       top: 0;
       width: 100vw;
       a {
         color: ${palette.white};
         font-size: 2rem;
+        &:first-child {
+          margin-top: 120px
+        }
+        &:last-child {
+          margin-bottom: 120px
+        }
       }
     }
   }
