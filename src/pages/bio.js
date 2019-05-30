@@ -8,6 +8,7 @@ const Content = styled.div`
     ${font.domine};
     color: ${palette.dark};
     font-size: 2.75rem;
+    width: 40vw;
     h3 {
       ${font.domine};
       color: ${font.dark};
