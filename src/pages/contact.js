@@ -19,7 +19,7 @@ const Content = styled.div`
     h3 {
       ${font.domine};
       color: ${palette.dark};
-      font-size: 2rem;
+      font-size: 1.65rem;
     }
   }
   .body {
@@ -27,7 +27,7 @@ const Content = styled.div`
     width: 50%;
     text-align: center;
     @media screen and (${breakpoint}) {
-      margin: 50px 0;
+      margin: 50px auto;
       width: 95%;
     }
     img { 
