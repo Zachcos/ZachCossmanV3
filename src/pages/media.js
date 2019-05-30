@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { palette, font } from '../imports/variables';
+import { palette, font, breakpoint } from '../imports/variables';
 
 const Content = styled.div`
   margin: 30vh 0 0 10vw;
