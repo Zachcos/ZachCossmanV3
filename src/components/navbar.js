@@ -70,7 +70,7 @@ const NavBar = styled.div`
         font-size: 2rem;
         font-weight: 700;
         &:first-child {
-          margin-top: 120px
+          margin-top: 60px
         }
         &:last-child {
           margin-bottom: 120px
