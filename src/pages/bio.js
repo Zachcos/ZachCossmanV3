@@ -39,6 +39,9 @@ const Content = styled.div`
   @media screen and (${breakpoint}) {
     margin: 25vh auto;
     width: 80vw;
+    .header {
+      width: 75vw;
+    }
     .body {
       margin: 50px 0;
       p {
