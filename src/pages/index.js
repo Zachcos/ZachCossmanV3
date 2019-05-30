@@ -35,7 +35,7 @@ const Content = styled.div`
     }
   }
   @media screen and (${breakpoint}) {
-    margin: 15vh auto;
+    margin: 25vh auto;
     width: 80vw;
     .body {
       margin: 50px 0;
