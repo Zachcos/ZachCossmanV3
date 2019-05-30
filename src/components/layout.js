@@ -37,7 +37,7 @@ const Display = styled.div`
   }
   @media screen and (${breakpoint}) {
     left: 0;
-    margin-top: 70vh;
+    margin-top: 60vh;
     padding-left: 0;
     width: 100vw;
     z-index: 100;
