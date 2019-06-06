@@ -14,10 +14,13 @@ const NavBar = styled.div`
   z-index: 10;
   .brand {
     ${font.domine}
-    color: ${palette.dark};
     font-size: 2rem;
     margin-left: 25px;
     margin-right: auto;
+    a {
+      color: ${palette.dark};
+      text-decoration: none;
+    }
   }
   .nav_btn {
     display: none;
@@ -112,7 +115,9 @@ export class Nav extends React.Component {
   render() {
     return (
       <NavBar>
-        <h1 className="brand">zach.</h1>
+        <h1 className="brand">
+          <Link to="/">zach.</Link>
+        </h1>
         <div className="nav_btn" id="nav_btn" onClick={this.handleClick}>
           <i className="fas fa-bars" />
         </div>
