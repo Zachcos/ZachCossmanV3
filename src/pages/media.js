@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import * as $ from 'jquery';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import { palette, font, breakpoint } from '../imports/variables';
 import '../css/lightgallery.css';
 import '../js/lightgallery.min.js';
 
-import headshot1 from '../../static/images/headshots/186.jpg';
-import headshot2 from '../../static/images/headshots/141.jpg';
-import headshot3 from '../../static/images/headshots/116.jpg';
-
 const Content = styled.div`
-  margin: 30vh 0 0 10vw;
+  /* margin: 30vh 0 0 10vw; */
+  margin: 15vh 0 0 0;
   .header {
     ${font.domine};
     color: ${palette.dark};
     font-size: 2.75rem;
+    margin-left: 10vw;
     h3 {
       ${font.domine};
       color: ${font.dark};
@@ -40,6 +40,10 @@ const Content = styled.div`
     span {
       ${font.montserrat_bold}
     }
+    #lightgallery {
+      display: flex;
+      justify-content: space-around;
+    }
   }
   @media screen and (${breakpoint}) {
     margin: 25vh auto;
@@ -63,22 +67,19 @@ class Media extends React.Component {
   }
 
   render() {
+    const { data } = this.props;
     return (
       <Content>
         <div className="header">
-          <h3>media.</h3>
+          <h3>headshots.</h3>
         </div>
         <div className="body">
           <div id="lightgallery">
-            <a href={headshot1}>
-              <img src={headshot1} />
-            </a>
-            <a href={headshot2}>
-              <img src={headshot2} />
-            </a>
-            <a href={headshot3}>
-              <img src={headshot3} />
-            </a>
+            {data.allImageSharp.nodes.map(item => (
+              <a href={item.original.src} key={item.id}>
+                <Img fixed={item.fixed} alt="?" />
+              </a>
+            ))}
           </div>
         </div>
       </Content>
@@ -87,3 +88,19 @@ class Media extends React.Component {
 }
 
 export default Media;
+
+export const query = graphql`
+  query {
+    allImageSharp {
+      nodes {
+        id
+        fixed(width: 250, height: 250, quality: 70) {
+          ...GatsbyImageSharpFixed
+        }
+        original {
+          src
+        }
+      }
+    }
+  }
+`;
