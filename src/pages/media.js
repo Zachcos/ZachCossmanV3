@@ -14,7 +14,7 @@ const Content = styled.div`
     ${font.domine};
     color: ${palette.dark};
     font-size: 2.75rem;
-    margin-left: 10vw;
+    margin-left: 5vw;
     h3 {
       ${font.domine};
       color: ${font.dark};
@@ -43,6 +43,14 @@ const Content = styled.div`
     #lightgallery {
       display: flex;
       justify-content: space-around;
+      height: 500px;
+    }
+    a {
+      display: block;
+      max-width: 250px;
+      max-height: 250px;
+      width: 250px;
+      height: 250px;
     }
   }
   @media screen and (${breakpoint}) {
@@ -77,7 +85,7 @@ class Media extends React.Component {
           <div id="lightgallery">
             {data.allImageSharp.nodes.map(item => (
               <a href={item.original.src} key={item.id}>
-                <Img fixed={item.fixed} alt="?" />
+                <Img fluid={item.fluid} alt="?" />
               </a>
             ))}
           </div>
@@ -94,8 +102,8 @@ export const query = graphql`
     allImageSharp {
       nodes {
         id
-        fixed(width: 250, height: 250, quality: 70) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 250, maxHeight: 250, quality: 70) {
+          ...GatsbyImageSharpFluid
         }
         original {
           src
