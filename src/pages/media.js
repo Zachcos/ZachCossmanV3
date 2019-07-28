@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { palette, font, breakpoint } from '../imports/variables';
 import 'lightgallery';
+import 'lg-video';
 import '../css/lightgallery.css';
 
 const Content = styled.div`
@@ -109,6 +110,17 @@ class Media extends React.Component {
                   <Img fluid={item.fluid} alt="?" />
                 </a>
               ))}
+          </div>
+        </div>
+        <div className="header">
+          <h3>video test</h3>
+          <div id="video-gallery" ref={this.onLightGallery}>
+            <a
+              href="https://www.youtube.com/watch?v=n3QfRJsF9Pk"
+              data-poster=""
+            >
+              <img src="/src/mediaImages/headshot_1.jpg" alt="test" />
+            </a>
           </div>
         </div>
       </Content>
