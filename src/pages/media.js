@@ -8,6 +8,9 @@ import 'lightgallery';
 import 'lg-video';
 import '../css/lightgallery.css';
 
+import featheredIndiansThumb from '../mediaImages/featheredIndiansThumb.png';
+import rainbowsNeverDieThumb from '../mediaImages/rainbowsNeverDieThumb.png';
+
 const Content = styled.div`
   /* margin: 30vh 0 0 10vw; */
   margin: 15vh 0 0 0;
@@ -21,17 +24,9 @@ const Content = styled.div`
       color: ${font.dark};
       font-size: 2rem;
     }
-    h6 {
-      ${font.montserrat};
-      color: ${palette.dark};
-      font-size: 0.875rem;
-      font-style: italic;
-      letter-spacing: 1px;
-      padding: 5px 0 0 75px;
-    }
   }
   .body {
-    margin: 50px;
+    margin: 50px 50px 100px 50px;
     p {
       ${font.montserrat}
       color: ${palette.dark};
@@ -41,11 +36,17 @@ const Content = styled.div`
     span {
       ${font.montserrat_bold}
     }
-    #lightgallery {
+    #lightgallery,
+    #video-gallery {
       display: flex;
-      height: 500px;
-      a {
-        margin-right: 15px;
+      height: 100%;
+    a {
+      display: block;
+      margin-right: 15px;
+      max-width: 150px;
+      max-height: 150px;
+      width: 250px;
+      height: 250px;
         &:first-child {
           margin-left: 4vw;
         }
@@ -54,21 +55,14 @@ const Content = styled.div`
         }
       }
     }
-    a {
-      display: block;
-      max-width: 150px;
-      max-height: 150px;
-      width: 250px;
-      height: 250px;
-    }
-  }
-  @media screen and (${breakpoint}) {
-    margin: 25vh auto;
-    width: 80vw;
-    .body {
-      margin: 50px 0;
-      p {
-        width: 100%;
+    @media screen and (${breakpoint}) {
+      margin: 25vh auto;
+      width: 80vw;
+      .body {
+        margin: 50px 0;
+        p {
+          width: 100%;
+        }
       }
     }
   }
@@ -113,13 +107,21 @@ class Media extends React.Component {
           </div>
         </div>
         <div className="header">
-          <h3>video test</h3>
+          <h3>#couchCovers</h3>
+        </div>
+        <div className="body">
           <div id="video-gallery" ref={this.onLightGallery}>
-            <a
-              href="https://www.youtube.com/watch?v=n3QfRJsF9Pk"
-              data-poster=""
-            >
-              <img src="/src/mediaImages/headshot_1.jpg" alt="test" />
+            <a href="https://youtu.be/_XK7NsJIB-s" data-poster="">
+              <img
+                src={featheredIndiansThumb}
+                alt="Feathered Indians by Tyler Childers"
+              />
+            </a>
+            <a href="https://youtu.be/lUA--zWVwZ4" data-poster="">
+              <img
+                src={rainbowsNeverDieThumb}
+                alt="Where Rainbows Never Die by The Steeldrivers"
+              />
             </a>
           </div>
         </div>
