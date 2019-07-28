@@ -4,8 +4,8 @@ import * as $ from 'jquery';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { palette, font, breakpoint } from '../imports/variables';
+import 'lightGallery';
 import '../css/lightgallery.css';
-import '../js/lightgallery.min.js';
 
 const Content = styled.div`
   /* margin: 30vh 0 0 10vw; */
