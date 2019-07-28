@@ -18,7 +18,7 @@ const Content = styled.div`
     h3 {
       ${font.domine};
       color: ${font.dark};
-      font-size: 2.75rem;
+      font-size: 2rem;
     }
     h6 {
       ${font.montserrat};
@@ -42,13 +42,21 @@ const Content = styled.div`
     }
     #lightgallery {
       display: flex;
-      justify-content: space-around;
       height: 500px;
+      a {
+        margin-right: 15px;
+        &:first-child {
+          margin-left: 4vw;
+        }
+        img {
+          border-radius: 6px;
+        }
+      }
     }
     a {
       display: block;
-      max-width: 250px;
-      max-height: 250px;
+      max-width: 150px;
+      max-height: 150px;
       width: 250px;
       height: 250px;
     }
@@ -83,11 +91,13 @@ class Media extends React.Component {
         </div>
         <div className="body">
           <div id="lightgallery">
-            {data.allImageSharp.nodes.map(item => (
-              <a href={item.original.src} key={item.id}>
-                <Img fluid={item.fluid} alt="?" />
-              </a>
-            ))}
+            {data.allImageSharp.nodes
+              .filter(item => item.original.src.includes('headshot'))
+              .map(item => (
+                <a href={item.original.src} key={item.id}>
+                  <Img fluid={item.fluid} alt="?" />
+                </a>
+              ))}
           </div>
         </div>
       </Content>
