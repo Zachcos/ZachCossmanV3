@@ -4,7 +4,7 @@ import * as $ from 'jquery';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { palette, font, breakpoint } from '../imports/variables';
-import 'lightGallery';
+import 'lightgallery';
 import '../css/lightgallery.css';
 
 const Content = styled.div`
