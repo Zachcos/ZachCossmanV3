@@ -74,12 +74,23 @@ const Content = styled.div`
 `;
 
 class Media extends React.Component {
-  componentDidMount() {
-    return (
-      <script>
-        $(document).ready(function() {$('#lightgallery').lightGallery()})
-      </script>
-    );
+  // componentDidMount() {
+  //   return (
+  //     <script>
+  //       $(document).ready(function() {$('#lightgallery').lightGallery()})
+  //     </script>
+  //   );
+  // }
+
+  onLightGallery = node => {
+    this.lightgallery = node;
+    $(node).lightGallery();
+  };
+
+  componentWillUnmount() {
+    $(this.lightGallery)
+      .data('lightGallery')
+      .destroy(true);
   }
 
   render() {
@@ -90,7 +101,7 @@ class Media extends React.Component {
           <h3>headshots.</h3>
         </div>
         <div className="body">
-          <div id="lightgallery">
+          <div id="lightgallery" ref={this.onLightGallery}>
             {data.allImageSharp.nodes
               .filter(item => item.original.src.includes('headshot'))
               .map(item => (
