@@ -10,6 +10,7 @@ import '../css/lightgallery.css';
 
 import featheredIndiansThumb from '../mediaImages/featheredIndiansThumb.png';
 import rainbowsNeverDieThumb from '../mediaImages/rainbowsNeverDieThumb.png';
+import ifYouWereTheRainThumb from '../mediaImages/ifYouWereTheRainThumb.png';
 
 const Content = styled.div`
   /* margin: 30vh 0 0 10vw; */
@@ -120,6 +121,12 @@ class Media extends React.Component {
             <a href="https://youtu.be/lUA--zWVwZ4" data-poster="">
               <img
                 src={rainbowsNeverDieThumb}
+                alt="Where Rainbows Never Die by The Steeldrivers"
+              />
+            </a>
+            <a href="https://youtu.be/zsMcn5ukpok" data-poster="">
+              <img
+                src={ifYouWereTheRainThumb}
                 alt="Where Rainbows Never Die by The Steeldrivers"
               />
             </a>
