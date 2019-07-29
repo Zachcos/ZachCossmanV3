@@ -127,7 +127,7 @@ class Media extends React.Component {
             <a href="https://youtu.be/zsMcn5ukpok" data-poster="">
               <img
                 src={ifYouWereTheRainThumb}
-                alt="Where Rainbows Never Die by The Steeldrivers"
+                alt="If You Were the Rain by Stephen Day"
               />
             </a>
           </div>
