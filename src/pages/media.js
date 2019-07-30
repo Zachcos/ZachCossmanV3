@@ -70,24 +70,16 @@ const Content = styled.div`
 `;
 
 class Media extends React.Component {
-  // componentDidMount() {
-  //   return (
-  //     <script>
-  //       $(document).ready(function() {$('#lightgallery').lightGallery()})
-  //     </script>
-  //   );
-  // }
-
-  onLightGallery = node => {
-    this.lightgallery = node;
-    $(node).lightGallery();
-  };
-
   componentWillUnmount() {
     $(this.lightGallery)
       .data('lightGallery')
       .destroy(true);
   }
+
+  onLightGallery = node => {
+    this.lightgallery = node;
+    $(node).lightGallery();
+  };
 
   render() {
     const { data } = this.props;
