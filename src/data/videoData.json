@@ -3,18 +3,18 @@
     "title": "Feathered Indians",
     "artist": "Tyler Childers",
     "videoUrl": "https://youtu.be/_XK7NsJIB-s",
-    "thumbnail": "../../images/featheredIndiansThumb.png"
+    "findMe": "featheredIndians"
   },
   {
     "title": "Where Rainbows Never Die",
     "artist": "The Steeldrivers",
     "videoUrl": "https://youtu.be/lUA--zWVwZ4",
-    "thumbnail": "../../images/rainbowsNeverDieThumb.png"
+    "findMe": "whereRainbowsNeverDie"
   },
   {
     "title": "If You Were the Rain",
     "artist": "Stephen Day",
     "videoUrl": "https://youtu.be/zsMcn5ukpok",
-    "thumbnail": "../../images/ifYouWereTheRainThumb.png"
+    "findMe": "ifYouWereTheRain"
   }
 ]
