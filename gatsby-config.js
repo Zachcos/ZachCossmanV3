@@ -13,11 +13,12 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `mediaImages`,
-        path: path.join(__dirname, `src`, `mediaImages`),
+        name: `data`,
+        path: `${__dirname}/src/data`,
       },
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
   ],
 };

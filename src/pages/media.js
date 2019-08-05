@@ -8,10 +8,6 @@ import 'lightgallery';
 import 'lg-video';
 import '../css/lightgallery.css';
 
-import featheredIndiansThumb from '../mediaImages/featheredIndiansThumb.png';
-import rainbowsNeverDieThumb from '../mediaImages/rainbowsNeverDieThumb.png';
-import ifYouWereTheRainThumb from '../mediaImages/ifYouWereTheRainThumb.png';
-
 const Content = styled.div`
   /* margin: 30vh 0 0 10vw; */
   margin: 15vh 0 0 0;
@@ -46,8 +42,8 @@ const Content = styled.div`
       margin-right: 15px;
       max-width: 150px;
       max-height: 150px;
-      width: 250px;
-      height: 250px;
+      width: 150px;
+      height: 150px;
         &:first-child {
           margin-left: 4vw;
         }
@@ -57,7 +53,7 @@ const Content = styled.div`
       }
     }
     @media screen and (${breakpoint}) {
-      margin: 25vh auto;
+      /* margin: 25vh auto; */
       width: 80vw;
       .body {
         margin: 50px 0;
@@ -70,11 +66,11 @@ const Content = styled.div`
 `;
 
 class Media extends React.Component {
-  componentWillUnmount() {
-    $(this.lightGallery)
-      .data('lightGallery')
-      .destroy(true);
-  }
+  // componentWillUnmount() {
+  //   $(this.lightGallery)
+  //     .data('lightGallery')
+  //     .destroy(true);
+  // }
 
   onLightGallery = node => {
     this.lightgallery = node;
@@ -90,11 +86,11 @@ class Media extends React.Component {
         </div>
         <div className="body">
           <div id="lightgallery" ref={this.onLightGallery}>
-            {data.allImageSharp.nodes
+            {data.images.nodes
               .filter(item => item.original.src.includes('headshot'))
               .map(item => (
                 <a href={item.original.src} key={item.id}>
-                  <Img fluid={item.fluid} alt="?" />
+                  <Img fluid={item.fluid} alt="" />
                 </a>
               ))}
           </div>
@@ -104,24 +100,21 @@ class Media extends React.Component {
         </div>
         <div className="body">
           <div id="video-gallery" ref={this.onLightGallery}>
-            <a href="https://youtu.be/_XK7NsJIB-s" data-poster="">
-              <img
-                src={featheredIndiansThumb}
-                alt="Feathered Indians by Tyler Childers"
-              />
-            </a>
-            <a href="https://youtu.be/lUA--zWVwZ4" data-poster="">
-              <img
-                src={rainbowsNeverDieThumb}
-                alt="Where Rainbows Never Die by The Steeldrivers"
-              />
-            </a>
-            <a href="https://youtu.be/zsMcn5ukpok" data-poster="">
-              <img
-                src={ifYouWereTheRainThumb}
-                alt="If You Were the Rain by Stephen Day"
-              />
-            </a>
+            {/* {data.videos.nodes.map(item => ( 
+              <a href={item.videoUrl} data-poster="">
+                <img src={item.thumbnail} alt="" />
+              </a>
+            ))} */}
+            {data.videos.nodes.map(item => {
+              const current = item.findMe;
+              return data.images.nodes
+                .filter(item2 => item2.fluid.src.includes(current))
+                .map(item2 => (
+                  <a href={item.videoUrl} alt={item.title}>
+                    <Img fluid={item2.fluid} alt={item.title} />
+                  </a>
+                ));
+            })}
           </div>
         </div>
       </Content>
@@ -133,7 +126,7 @@ export default Media;
 
 export const query = graphql`
   query {
-    allImageSharp {
+    images: allImageSharp {
       nodes {
         id
         fluid(maxWidth: 250, maxHeight: 250, quality: 70) {
@@ -142,6 +135,15 @@ export const query = graphql`
         original {
           src
         }
+      }
+    }
+
+    videos: allVideoDataJson {
+      nodes {
+        title
+        artist
+        videoUrl
+        findMe
       }
     }
   }
