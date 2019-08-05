@@ -90,7 +90,7 @@ class Media extends React.Component {
               .filter(item => item.original.src.includes('headshot'))
               .map(item => (
                 <a href={item.original.src} key={item.id}>
-                  <Img fluid={item.fluid} alt="?" />
+                  <Img fluid={item.fluid} alt="" />
                 </a>
               ))}
           </div>
@@ -100,11 +100,21 @@ class Media extends React.Component {
         </div>
         <div className="body">
           <div id="video-gallery" ref={this.onLightGallery}>
-            {data.videos.nodes.map(item => (
+            {/* {data.videos.nodes.map(item => ( 
               <a href={item.videoUrl} data-poster="">
                 <img src={item.thumbnail} alt="" />
               </a>
-            ))}
+            ))} */}
+            {data.videos.nodes.map(item => {
+              const current = item.findMe;
+              return data.images.nodes
+                .filter(item2 => item2.fluid.src.includes(current))
+                .map(item2 => (
+                  <a href={item.videoUrl} alt={item.title}>
+                    <Img fluid={item2.fluid} alt={item.title} />
+                  </a>
+                ));
+            })}
           </div>
         </div>
       </Content>
@@ -133,7 +143,7 @@ export const query = graphql`
         title
         artist
         videoUrl
-        thumbnail
+        findMe
       }
     }
   }
