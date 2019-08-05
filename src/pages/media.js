@@ -53,7 +53,6 @@ const Content = styled.div`
       }
     }
     @media screen and (${breakpoint}) {
-      /* margin: 25vh auto; */
       width: 80vw;
       .body {
         margin: 50px 0;
@@ -66,12 +65,6 @@ const Content = styled.div`
 `;
 
 class Media extends React.Component {
-  // componentWillUnmount() {
-  //   $(this.lightGallery)
-  //     .data('lightGallery')
-  //     .destroy(true);
-  // }
-
   onLightGallery = node => {
     this.lightgallery = node;
     $(node).lightGallery();
@@ -100,11 +93,6 @@ class Media extends React.Component {
         </div>
         <div className="body">
           <div id="video-gallery" ref={this.onLightGallery}>
-            {/* {data.videos.nodes.map(item => ( 
-              <a href={item.videoUrl} data-poster="">
-                <img src={item.thumbnail} alt="" />
-              </a>
-            ))} */}
             {data.videos.nodes.map(item => {
               const current = item.findMe;
               return data.images.nodes
