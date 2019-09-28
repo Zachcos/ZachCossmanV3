@@ -33,6 +33,9 @@ const Content = styled.div`
     span {
       ${font.montserrat_bold}
     }
+    a {
+      color: ${palette.dark};
+    }
   }
   @media screen and (${breakpoint}) {
     margin: 25vh auto;
