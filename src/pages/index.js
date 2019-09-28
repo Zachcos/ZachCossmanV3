@@ -49,26 +49,32 @@ const Content = styled.div`
 export default () => (
   <Content>
     <div className="header">
-      <h3>Back in NYC</h3>
-      <h6>Saturday, March 18th</h6>
+      <h3>Brad in Rocky Horror</h3>
+      <h6>Tuesday, October 2nd</h6>
     </div>
     <div className="body">
       <p>
-        Zach is back in NYC after playing <span>Jerry Allison</span> in{' '}
-        <span>BUDDY: The Buddy Holly Story</span> at Bucks County Playhouse in
-        New Hope, PA.
+        Zach is currently playing <span>Brad Majors</span> in{' '}
+        <span>The Rocky Horror Show</span> at Bucks County Playhouse in New
+        Hope, PA.
         <br />
         <br />
-        This production returned to the Bucks County Playhouse for the 3rd time,
-        after wildly-successful runs in 2016 and 2017. Zach played Jerry Allison
-        in both of the previous iterations.
+        The production runs October 11th – October 27th, with direction by
+        Hunter Foster and choreography by Lorin Latarro.
         <br />
         <br />
-        The production ran February 10th – March 3rd, with direction by Hunter
-        Foster and choreography by Lorin Latarro.
+        <a
+          href="https://bcptheater.secure.force.com/ticket#/events/a0S1L00000Qye6YUAR"
+          target="_blank"
+        >
+          Click here
+        </a>{' '}
+        to purchase tickets.
         <br />
-        <br />
-        Stay tuned for information about upcoming gigs.
+        <a href="https://bcptheater.org/the-rocky-horror-show/" target="_blank">
+          Click Here
+        </a>{' '}
+        for more information about the show.
       </p>
     </div>
   </Content>
