@@ -52,32 +52,21 @@ const Content = styled.div`
 export default () => (
   <Content>
     <div className="header">
-      <h3>Brad in Rocky Horror</h3>
-      <h6>Tuesday, October 2nd</h6>
+      <h3>Back in NYC</h3>
+      <h6>Monday, October 28th</h6>
     </div>
     <div className="body">
       <p>
-        Zach is currently playing <span>Brad Majors</span> in{' '}
-        <span>The Rocky Horror Show</span> at Bucks County Playhouse in New
-        Hope, PA.
+        Zach has returned to NYC after reprising his role of{' '}
+        <span>Brad Majors</span> in <span>The Rocky Horror Show</span> at the
+        Bucks County Playhouse in New Hope, PA.
         <br />
         <br />
-        The production runs October 11th – October 27th, with direction by
-        Hunter Foster and choreography by Lorin Latarro.
+        The production ran October 11th – October 27th, with direction by Hunter
+        Foster and choreography by Lorin Latarro.
         <br />
         <br />
-        <a
-          href="https://bcptheater.secure.force.com/ticket#/events/a0S1L00000Qye6YUAR"
-          target="_blank"
-        >
-          Click here
-        </a>{' '}
-        to purchase tickets.
-        <br />
-        <a href="https://bcptheater.org/the-rocky-horror-show/" target="_blank">
-          Click Here
-        </a>{' '}
-        for more information about the show.
+        Stay tuned for upcoming gigs.
       </p>
     </div>
   </Content>
