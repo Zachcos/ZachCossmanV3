@@ -89,7 +89,7 @@ class Media extends React.Component {
           </div>
         </div>
         <div className="header">
-          <h3>#couchCovers</h3>
+          <h3>covers.</h3>
         </div>
         <div className="body">
           <div id="video-gallery" ref={this.onLightGallery}>
