@@ -52,21 +52,16 @@ const Content = styled.div`
 export default () => (
   <Content>
     <div className="header">
-      <h3>Back in NYC</h3>
-      <h6>Monday, October 28th</h6>
+      <h3>Ren McCormack in Footloose</h3>
+      <h6>Monday, February 24th</h6>
     </div>
     <div className="body">
       <p>
-        Zach has returned to NYC after reprising his role of{' '}
-        <span>Brad Majors</span> in <span>The Rocky Horror Show</span> at the
-        Bucks County Playhouse in New Hope, PA.
+        Zach is currently in rehearsals to play Ren McCormack in Footloose
+        aboard the Norwegian Joy.
         <br />
         <br />
-        The production ran October 11th – October 27th, with direction by Hunter
-        Foster and choreography by Lorin Latarro.
-        <br />
-        <br />
-        Stay tuned for upcoming gigs.
+        Stay tuned for more information about the show.
       </p>
     </div>
   </Content>
