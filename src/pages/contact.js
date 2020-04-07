@@ -31,7 +31,7 @@ const Content = styled.div`
       width: 95%;
     }
     img { 
-      max-width: 100%;
+      max-width: 250px;
       margin: 0 auto 25px auto;
     }
     p {
