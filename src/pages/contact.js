@@ -59,7 +59,7 @@ export default () => (
     </div>
     <div className="body">
       <img src={agencyLogo} alt="Ann Steele Agency logo" />
-      <p>330 West 42nd St. 18th Floor. New York, NY 10036</p>
+      <p>165 West 46th St. Suite 815 New York, NY 10036</p>
       <p>p: 212.629.9112</p>
       <a href="http://annsteeleagency.com" target="_blank">
         www.annsteeleagency.com
