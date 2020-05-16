@@ -88,21 +88,16 @@ const NavBar = styled.div`
   }
 `;
 
-export class Nav extends React.Component {
-  handleClick = () => {
-    this.toggleNav();
-    this.toggleBtn();
-  };
-
-  toggleNav = () => {
+export default function Nav() {
+  function toggleNav() {
     if ($('#nav').hasClass('open')) {
       $('#nav').removeClass('open');
     } else {
       $('#nav').addClass('open');
     }
-  };
+  }
 
-  toggleBtn = () => {
+  function toggleBtn() {
     if ($('#nav_btn > i').hasClass('fa-bars')) {
       $('#nav_btn > i').removeClass('fa-bars');
       $('#nav_btn > i').addClass('fa-times');
@@ -110,37 +105,38 @@ export class Nav extends React.Component {
       $('#nav_btn > i').removeClass('fa-times');
       $('#nav_btn > i').addClass('fa-bars');
     }
-  };
-
-  render() {
-    return (
-      <NavBar>
-        <h1 className="brand">
-          <Link to="/">zach.</Link>
-        </h1>
-        <div className="nav_btn" id="nav_btn" onClick={this.handleClick}>
-          <i className="fas fa-bars" />
-        </div>
-        <div className="nav" id="nav">
-          <Link onClick={this.handleClick} to="/">
-            home
-          </Link>
-          <Link onClick={this.handleClick} to="/bio">
-            bio
-          </Link>
-          <Link onClick={this.handleClick} to="/resume">
-            resume
-          </Link>
-          <Link onClick={this.handleClick} to="/media">
-            media
-          </Link>
-          <Link onClick={this.handleClick} to="/contact">
-            contact
-          </Link>
-        </div>
-      </NavBar>
-    );
   }
-}
 
-export default Nav;
+  function handleClick() {
+    toggleNav();
+    toggleBtn();
+  }
+
+  return (
+    <NavBar>
+      <h1 className="brand">
+        <Link to="/">zach.</Link>
+      </h1>
+      <div className="nav_btn" id="nav_btn" onClick={handleClick}>
+        <i className="fas fa-bars" />
+      </div>
+      <div className="nav" id="nav">
+        <Link onClick={handleClick} to="/">
+          home
+        </Link>
+        <Link onClick={handleClick} to="/bio">
+          bio
+        </Link>
+        <Link onClick={handleClick} to="/resume">
+          resume
+        </Link>
+        <Link onClick={handleClick} to="/media">
+          media
+        </Link>
+        <Link onClick={handleClick} to="/contact">
+          contact
+        </Link>
+      </div>
+    </NavBar>
+  );
+}
