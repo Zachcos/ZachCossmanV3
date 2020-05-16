@@ -28,11 +28,13 @@ const DownloadLink = styled.div`
   }
 `;
 
-export default () => (
-  <Content>
-    <DownloadLink>
-      <a href={resumePDF}>Download headshot/resume</a>
-    </DownloadLink>
-    <img src={resume} alt="Zach Cossman Resume" />
-  </Content>
-);
+export default function Resume() {
+  return (
+    <Content>
+      <DownloadLink>
+        <a href={resumePDF}>Download headshot/resume</a>
+      </DownloadLink>
+      <img src={resume} alt="Zach Cossman Resume" />
+    </Content>
+  );
+}

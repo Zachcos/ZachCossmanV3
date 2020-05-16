@@ -52,28 +52,30 @@ const Content = styled.div`
   }
 `;
 
-export default () => (
-  <Content>
-    <div className="header">
-      <h3>Zach is represented by:</h3>
-    </div>
-    <div className="body">
-      <img src={agencyLogo} alt="Ann Steele Agency logo" />
-      <p>165 West 46th St. Suite 815 New York, NY 10036</p>
-      <p>p: 212.629.9112</p>
-      <a href="http://annsteeleagency.com" target="_blank">
-        www.annsteeleagency.com
-      </a>
-      <div className="spacer" />
-      <p>For web design information, visit:</p>
-      <a href="https://zachcossmandesigns.com" target="_blank">
-        www.zachcossmandesigns.com
-      </a>
-      <div className="spacer" />
-      <p>For personal inquiries, email me at:</p>
-      <a href="mailto:Zachcos@gmail.com" target="_blank">
-        Zachcos@gmail.com
-      </a>
-    </div>
-  </Content>
-);
+export default function Contact() {
+  return (
+    <Content>
+      <div className="header">
+        <h3>Zach is represented by:</h3>
+      </div>
+      <div className="body">
+        <img src={agencyLogo} alt="Ann Steele Agency logo" />
+        <p>165 West 46th St. Suite 815 New York, NY 10036</p>
+        <p>p: 212.629.9112</p>
+        <a href="http://annsteeleagency.com" target="_blank">
+          www.annsteeleagency.com
+        </a>
+        <div className="spacer" />
+        <p>For web design information, visit:</p>
+        <a href="https://zachcossmandesigns.com" target="_blank">
+          www.zachcossmandesigns.com
+        </a>
+        <div className="spacer" />
+        <p>For personal inquiries, email me at:</p>
+        <a href="mailto:Zachcos@gmail.com" target="_blank">
+          Zachcos@gmail.com
+        </a>
+      </div>
+    </Content>
+  );
+}

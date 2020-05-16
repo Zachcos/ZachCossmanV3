@@ -49,20 +49,22 @@ const Content = styled.div`
   }
 `;
 
-export default () => (
-  <Content>
-    <div className="header">
-      <h3>Ren McCormack in Footloose</h3>
-      <h6>Monday, February 24th</h6>
-    </div>
-    <div className="body">
-      <p>
-        Zach is currently in rehearsals to play Ren McCormack in Footloose
-        aboard the Norwegian Joy.
-        <br />
-        <br />
-        Stay tuned for more information about the show.
-      </p>
-    </div>
-  </Content>
-);
+export default function Index() {
+  return (
+    <Content>
+      <div className="header">
+        <h3>Ren McCormack in Footloose</h3>
+        <h6>Monday, February 24th</h6>
+      </div>
+      <div className="body">
+        <p>
+          Zach is currently in rehearsals to play Ren McCormack in Footloose
+          aboard the Norwegian Joy.
+          <br />
+          <br />
+          Stay tuned for more information about the show.
+        </p>
+      </div>
+    </Content>
+  );
+}

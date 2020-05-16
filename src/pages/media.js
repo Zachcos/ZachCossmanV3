@@ -64,53 +64,48 @@ const Content = styled.div`
   }
 `;
 
-class Media extends React.Component {
-  onLightGallery = node => {
-    this.lightgallery = node;
+export default function Media(props) {
+  function onLightGallery(node) {
     $(node).lightGallery();
-  };
-
-  render() {
-    const { data } = this.props;
-    return (
-      <Content>
-        <div className="header">
-          <h3>headshots.</h3>
-        </div>
-        <div className="body">
-          <div id="lightgallery" ref={this.onLightGallery}>
-            {data.images.nodes
-              .filter(item => item.original.src.includes('headshot'))
-              .map(item => (
-                <a href={item.original.src} key={item.id}>
-                  <Img fluid={item.fluid} alt="" />
-                </a>
-              ))}
-          </div>
-        </div>
-        <div className="header">
-          <h3>covers.</h3>
-        </div>
-        <div className="body">
-          <div id="video-gallery" ref={this.onLightGallery}>
-            {data.videos.nodes.map(item => {
-              const current = item.findMe;
-              return data.images.nodes
-                .filter(item2 => item2.fluid.src.includes(current))
-                .map(item2 => (
-                  <a href={item.videoUrl} alt={item.title}>
-                    <Img fluid={item2.fluid} alt={item.title} />
-                  </a>
-                ));
-            })}
-          </div>
-        </div>
-      </Content>
-    );
   }
-}
+  const { data } = props;
 
-export default Media;
+  return (
+    <Content>
+      <div className="header">
+        <h3>headshots.</h3>
+      </div>
+      <div className="body">
+        <div id="lightgallery" ref={onLightGallery}>
+          {data.images.nodes
+            .filter(item => item.original.src.includes('headshot'))
+            .map(item => (
+              <a href={item.original.src} key={item.id}>
+                <Img fluid={item.fluid} alt="" />
+              </a>
+            ))}
+        </div>
+      </div>
+      <div className="header">
+        <h3>covers.</h3>
+      </div>
+      <div className="body">
+        <div id="video-gallery" ref={onLightGallery}>
+          {data.videos.nodes.map(item => {
+            const current = item.findMe;
+            return data.images.nodes
+              .filter(item2 => item2.fluid.src.includes(current))
+              .map(item2 => (
+                <a href={item.videoUrl} alt={item.title}>
+                  <Img fluid={item2.fluid} alt={item.title} />
+                </a>
+              ));
+          })}
+        </div>
+      </div>
+    </Content>
+  );
+}
 
 export const query = graphql`
   query {

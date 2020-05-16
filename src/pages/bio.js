@@ -51,37 +51,39 @@ const Content = styled.div`
   }
 `;
 
-export default () => (
-  <Content>
-    <div className="header">
-      <h3>
-        Before moving to NYC, Zach spent his time surrounded by music and the
-        arts.
-      </h3>
-    </div>
-    <div className="body">
-      <p>
-        Growing up in Fairfield, Ohio, Zach was exposed to music when he began
-        taking drum lessons at the age of 10. His love for music evolved into a
-        love for theatre, which led Zach to a four-year journey at Wright State
-        University in the BFA Musical Theatre program.
-        <br />
-        <br />
-        During his time there, he had the opportunity to be a part of several
-        shows, such as Hairspray, Sweeney Todd, Titanic, RENT, Anything Goes,
-        Little Women, Hello Dolly, and most memorably, Billy Lawlor in 42nd
-        Street, and Leaf Coneybear in The 25th Annual Putnam County Spelling
-        Bee.
-        <br />
-        <br />
-        In the short time following his graduation, Zach had the opportunity to
-        work on the world-premiere production of Revolution in the Elbow of
-        Ragnar Agnarsson Furniture Painter Off-Broadway at the Minetta Lane
-        theatre. Additionally, Zach has worked regionally at theatres such as
-        Cincinnati Playhouse in the Park, Repertory Theatre of St. Louis, Bucks
-        County Playhouse, Theatre Under the Stars, North Carolina Theatre, Casa
-        Mañana, and many others.
-      </p>
-    </div>
-  </Content>
-);
+export default function Bio() {
+  return (
+    <Content>
+      <div className="header">
+        <h3>
+          Before moving to NYC, Zach spent his time surrounded by music and the
+          arts.
+        </h3>
+      </div>
+      <div className="body">
+        <p>
+          Growing up in Fairfield, Ohio, Zach was exposed to music when he began
+          taking drum lessons at the age of 10. His love for music evolved into
+          a love for theatre, which led Zach to a four-year journey at Wright
+          State University in the BFA Musical Theatre program.
+          <br />
+          <br />
+          During his time there, he had the opportunity to be a part of several
+          shows, such as Hairspray, Sweeney Todd, Titanic, RENT, Anything Goes,
+          Little Women, Hello Dolly, and most memorably, Billy Lawlor in 42nd
+          Street, and Leaf Coneybear in The 25th Annual Putnam County Spelling
+          Bee.
+          <br />
+          <br />
+          In the short time following his graduation, Zach had the opportunity
+          to work on the world-premiere production of Revolution in the Elbow of
+          Ragnar Agnarsson Furniture Painter Off-Broadway at the Minetta Lane
+          theatre. Additionally, Zach has worked regionally at theatres such as
+          Cincinnati Playhouse in the Park, Repertory Theatre of St. Louis,
+          Bucks County Playhouse, Theatre Under the Stars, North Carolina
+          Theatre, Casa Mañana, and many others.
+        </p>
+      </div>
+    </Content>
+  );
+}
