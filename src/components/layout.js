@@ -61,7 +61,6 @@ export default function Layout({ children }) {
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
           crossOrigin="anonymous"
         />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" />
         <title>ZachCossman.com</title>
       </Helmet>
       <Hero />
