@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { palette, font, breakpoint } from '../imports/variables';
@@ -89,27 +89,20 @@ const NavBar = styled.div`
 `;
 
 export default function Nav() {
-  function toggleNav() {
-    if ($('#nav').hasClass('open')) {
-      $('#nav').removeClass('open');
-    } else {
-      $('#nav').addClass('open');
-    }
-  }
+  const [open, setOpen] = useState(false);
 
-  function toggleBtn() {
-    if ($('#nav_btn > i').hasClass('fa-bars')) {
-      $('#nav_btn > i').removeClass('fa-bars');
-      $('#nav_btn > i').addClass('fa-times');
+  function navToggle() {
+    if (open) {
+      document.getElementById('nav').classList.remove('open');
+      document.getElementById('nav_btn').classList.add('fa-bars');
+      document.getElementById('nav_btn').classList.remove('fa-times');
+      setOpen(!open);
     } else {
-      $('#nav_btn > i').removeClass('fa-times');
-      $('#nav_btn > i').addClass('fa-bars');
+      document.getElementById('nav').classList.add('open');
+      document.getElementById('nav_btn').classList.add('fa-times');
+      document.getElementById('nav_btn').classList.remove('fa-bars');
+      setOpen(!open);
     }
-  }
-
-  function handleClick() {
-    toggleNav();
-    toggleBtn();
   }
 
   return (
@@ -117,23 +110,23 @@ export default function Nav() {
       <h1 className="brand">
         <Link to="/">zach.</Link>
       </h1>
-      <div className="nav_btn" id="nav_btn" onClick={handleClick}>
-        <i className="fas fa-bars" />
+      <div className="nav_btn" onClick={navToggle}>
+        <i id="nav_btn" className="fas fa-bars" />
       </div>
       <div className="nav" id="nav">
-        <Link onClick={handleClick} to="/">
+        <Link onClick={navToggle} to="/">
           home
         </Link>
-        <Link onClick={handleClick} to="/bio">
+        <Link onClick={navToggle} to="/bio">
           bio
         </Link>
-        <Link onClick={handleClick} to="/resume">
+        <Link onClick={navToggle} to="/resume">
           resume
         </Link>
-        <Link onClick={handleClick} to="/media">
+        <Link onClick={navToggle} to="/media">
           media
         </Link>
-        <Link onClick={handleClick} to="/contact">
+        <Link onClick={navToggle} to="/contact">
           contact
         </Link>
       </div>
